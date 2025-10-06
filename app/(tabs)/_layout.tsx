@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { Hop as Home, Sprout, Bell, User, MapPin } from 'lucide-react-native';
+import { Hop as Home, Sprout, Bell, User, MapPin, MessageSquare } from 'lucide-react-native';
 
 export default function TabLayout() {
   return (
@@ -40,6 +40,13 @@ export default function TabLayout() {
         options={{
           title: 'Crops',
           tabBarIcon: ({ size, color }) => <Sprout size={size} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="chat"
+        options={{
+          title: 'CropCast',
+          tabBarIcon: ({ size, color }) => <MessageSquare size={size} color={color} />,
         }}
       />
       <Tabs.Screen
